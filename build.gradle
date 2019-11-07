@@ -27,8 +27,9 @@ dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:28.0-jre'
 
-    api 'edu.wpi.first.shuffleboard:shuffleboard:2019.4.1-6-gaa891d9'
-    compile 'edu.wpi.first.shuffleboard:shuffleboard:2019.4.1-6-gaa891d9'
+    api 'edu.wpi.first.shuffleboard:api:2019.4.1-6-gaa891d9'
+    compile 'edu.wpi.first.shuffleboard:api:2019.4.1-6-gaa891d9'
+    compile wpi.deps.wpilib()
 }
 
 task copyLibs(type: Copy) {

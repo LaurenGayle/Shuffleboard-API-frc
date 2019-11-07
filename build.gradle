@@ -16,7 +16,7 @@ repositories {
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
     maven {
-      url 'https://first.wpi.edu/FRC/roborio/maven/development/'
+      url 'https://first.wpi.edu/FRC/roborio/maven/release/'
     }
 }
 
@@ -27,16 +27,13 @@ dependencies {
     // This dependency is used internally, and not exposed to consumers on their own compile classpath.
     implementation 'com.google.guava:guava:28.0-jre'
 
-    api 'edu.wpi.first.shuffleboard:api:2019.4.1-6-gaa891d9'
-    compile 'edu.wpi.first.shuffleboard:api:2019.4.1-6-gaa891d9'
-    compile wpi.deps.wpilib()
-}
+    api 'edu.wpi.first.shuffleboard:api:2019.4.1'
+    api 'edu.wpi.first.wpilibj:wpilibj-java:2019.4.1'
 
-task copyLibs(type: Copy) {
-    from configurations.testRuntime.files
-    into "$buildDir/lib"
-}
-task testJar(type: Jar, dependsOn: testClasses) {
-    classifier = 'tests'
-    from sourceSets.test.output
+    
+  
+    compile 'edu.wpi.first.shuffleboard:api:2019.4.1'
+
+    compile 'edu.wpi.first.wpilibj:wpilibj-java:2019.4.1'
+    
 }

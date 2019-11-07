@@ -1,23 +1,34 @@
 package Shuffle.Lib;
 
+
+import edu.wpi.first.shuffleboard.api.widget.Layout;
 import edu.wpi.first.wpilibj.shuffleboard.*;
+
 
 public class Shuffletab{
      
 
 
-    public interface Shuffletablib {
-    
-        public String tabname;
-        public String tab_name ="";
-        public String dataentry ;
-    
-    }
-   
-public void NewTab(ShuffleboardTab Shufflelib ){
 
-    Shufflelib.getLayout(Shuffletablib.tab_name);
-  
+    public interface ShufflelibTAB {
+    
+        
+        public String tab_name ="";
+       
+        
+      
+    
     }
+
+
+    
+   
+    public void NewTab( ShuffleboardTab shufflelibTab){
+
+    shufflelibTab.getLayout(ShufflelibTAB.tab_name);
+    
+    }
+
+
 }
 
